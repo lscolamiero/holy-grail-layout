@@ -1,0 +1,67 @@
+* {
+    outline: 1px solid white;
+}
+
+body {
+    background: red;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    background: black;
+    height: 100vh;
+    flex-direction: column;
+    
+}
+
+header, footer {
+    background: green;
+    flex-grow: 1;
+}
+
+/* azucar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav, aside {
+    background: darkcyan;
+    flex-grow: 1;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background: darkgreen;
+    flex-grow: 3;
+    min-height: 65vh;
+}
+
+@media (min-width: 600px) {
+    /* body {
+        display: none;
+    } */
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    header, footer {
+        width: 100%;
+    }
+
+    main {
+        width: 55vw;
+    }
+}
